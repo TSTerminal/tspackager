@@ -1,0 +1,13 @@
+How to build this packager:
+
+1) Install Antlr 4.x latest version.  Full tool, not just runtime.
+
+2) java org.antlr.v4.Tool JavaScriptLexer.g4 -o grammar -package com.zossteam.tspackager.grammar
+
+3) Download https://raw.githubusercontent.com/antlr/grammars-v4/master/javascript/javascript/Java/JavaScriptLexerBase.java (or use curl) to the grammar directory you built on step 2.
+
+4) Add "package com.zossteam.tspackager.grammar;" as line 1 of JavaScriptLexerBase.java
+
+5) javac *.java
+
+6) javac grammar/*.java
